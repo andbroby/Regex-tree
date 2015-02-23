@@ -1,2 +1,3 @@
 # Regex-tree
-A Java implementation of a regex matching algorithm representing the regex as a tree of nodes instead of a finite automaton.
+
+See: [An Efficient and Elegant Regular Expression Matcher in Python ](http://morepypy.blogspot.no/2010/05/efficient-and-elegant-regular.html)
