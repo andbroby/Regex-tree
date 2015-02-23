@@ -1,9 +1,13 @@
 package com.andbroby;
 
+import com.andbroby.operators.*;
+import com.andbroby.operators.CharacterNode;
+
 public class Main {
 
     public static void main(String[] args) {
-        boolean matches = match(new Character('c'), "cd");
+        RegexNode re = new AlternativeNode(new CharacterNode('c'), new CharacterNode('b'));
+        boolean matches = match(re, "c");
         System.out.println(matches);
     }
 

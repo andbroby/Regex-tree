@@ -17,8 +17,11 @@ public abstract class RegexNode {
         this.marked = false;
     }
 
-
     public boolean isEmpty() {
         return this.empty;
+    }
+
+    public boolean getMark() {
+        return this.marked;
     }
 }

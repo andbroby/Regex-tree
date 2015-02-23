@@ -5,10 +5,14 @@ import com.andbroby.RegexNode;
 /**
  * Created by broby on 23/02/15.
  */
-public class Repetition extends RegexNode {
+public class RepetitionNode extends RegexNode {
     RegexNode re;
 
-    public Repetition(RegexNode re) {
+    public static RepetitionNode createNode(RegexNode re) {
+        return new RepetitionNode(re);
+    }
+
+    private RepetitionNode(RegexNode re) {
         super(true);
         this.re = re;
     }
