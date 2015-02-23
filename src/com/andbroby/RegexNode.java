@@ -5,10 +5,10 @@ package com.andbroby;
  */
 public abstract class RegexNode {
     protected boolean marked = false;
-    protected boolean empty;
+    protected boolean matchEmptyString;
 
-    public RegexNode(boolean empty) {
-        this.empty = empty;
+    public RegexNode(boolean matchEmptyString) {
+        this.matchEmptyString = matchEmptyString;
     }
 
     public abstract boolean shift(char c, boolean mark);
@@ -17,8 +17,8 @@ public abstract class RegexNode {
         this.marked = false;
     }
 
-    public boolean isEmpty() {
-        return this.empty;
+    public boolean canMatchEmptyString() {
+        return this.matchEmptyString;
     }
 
     public boolean getMark() {

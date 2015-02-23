@@ -1,7 +1,5 @@
 package com.andbroby;
 
-import com.andbroby.operators.*;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class Main {
         boolean result;
 
         if (string.isEmpty()) {
-            return re.isEmpty();
+            return re.canMatchEmptyString();
         }
 
         result = re.shift(string.charAt(0), true);

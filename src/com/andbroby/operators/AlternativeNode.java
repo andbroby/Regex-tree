@@ -9,7 +9,7 @@ public class AlternativeNode extends BinaryNode {
     protected boolean matchEmptyString;
 
     public static AlternativeNode createNode(RegexNode leftChild, RegexNode rightChild) {
-        boolean empty = leftChild.isEmpty() || rightChild.isEmpty();
+        boolean empty = leftChild.canMatchEmptyString() || rightChild.canMatchEmptyString();
 
         return new AlternativeNode(leftChild, rightChild, empty);
     }
