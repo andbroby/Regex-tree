@@ -1,14 +1,10 @@
 package com.andbroby;
 
 import com.andbroby.operators.*;
-import com.andbroby.operators.CharacterNode;
 
 public class Main {
 
     public static void main(String[] args) {
-        RegexNode re = new AlternativeNode(new CharacterNode('c'), new CharacterNode('b'));
-        boolean matches = match(re, "c");
-        System.out.println(matches);
     }
 
     private static boolean match(RegexNode re, String string) {

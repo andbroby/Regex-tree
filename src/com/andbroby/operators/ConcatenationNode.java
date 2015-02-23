@@ -6,17 +6,17 @@ import com.andbroby.RegexNode;
  * Created by broby on 23/02/15.
  */
 public class ConcatenationNode extends BinaryNode {
-    protected boolean empty;
+    protected boolean matchEmptyString;
 
     public static ConcatenationNode createNode(RegexNode leftChild, RegexNode rightChild) {
-        boolean empty = leftChild.isEmpty() && rightChild.isEmpty();
+        boolean matchEmptyString = leftChild.isEmpty() && rightChild.isEmpty();
 
-        return new ConcatenationNode(leftChild, rightChild, empty);
+        return new ConcatenationNode(leftChild, rightChild, matchEmptyString);
     }
 
-    private ConcatenationNode(RegexNode leftChild, RegexNode rightChild, boolean empty) {
-        super(leftChild, rightChild, empty);
-        this.empty = empty;
+    private ConcatenationNode(RegexNode leftChild, RegexNode rightChild, boolean matchEmptyString) {
+        super(leftChild, rightChild, matchEmptyString);
+        this.matchEmptyString = matchEmptyString;
     }
 
     public boolean shift(char c, boolean mark) {

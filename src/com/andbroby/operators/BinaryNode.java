@@ -9,8 +9,8 @@ public abstract class BinaryNode extends RegexNode {
     protected RegexNode leftChild;
     protected RegexNode rightChild;
 
-    public BinaryNode(RegexNode leftChild, RegexNode rightChild, boolean empty) {
-        super(empty);
+    public BinaryNode(RegexNode leftChild, RegexNode rightChild, boolean matchEmptyString) {
+        super(matchEmptyString);
         this.leftChild = leftChild;
         this.rightChild = rightChild;
     }

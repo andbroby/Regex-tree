@@ -6,7 +6,7 @@ import com.andbroby.RegexNode;
  * Created by broby on 23/02/15.
  */
 public class AlternativeNode extends BinaryNode {
-    protected boolean empty;
+    protected boolean matchEmptyString;
 
     public static AlternativeNode createNode(RegexNode leftChild, RegexNode rightChild) {
         boolean empty = leftChild.isEmpty() || rightChild.isEmpty();
@@ -14,9 +14,9 @@ public class AlternativeNode extends BinaryNode {
         return new AlternativeNode(leftChild, rightChild, empty);
     }
 
-    private AlternativeNode(RegexNode leftChild, RegexNode rightChild, boolean empty) {
-        super(leftChild, rightChild, empty);
-        this.empty = empty;
+    private AlternativeNode(RegexNode leftChild, RegexNode rightChild, boolean matchEmptyString) {
+        super(leftChild, rightChild, matchEmptyString);
+        this.matchEmptyString = matchEmptyString;
     }
 
     public boolean shift(char c, boolean mark) {

@@ -6,7 +6,7 @@ import com.andbroby.RegexNode;
  * Created by broby on 23/02/15.
  */
 public class RepetitionNode extends RegexNode {
-    RegexNode re;
+    private RegexNode re;
 
     public static RepetitionNode createNode(RegexNode re) {
         return new RepetitionNode(re);
