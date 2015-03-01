@@ -4,7 +4,7 @@ package com.andbroby;
  * Created by broby on 01/03/15.
  */
 public class re {
-    RegexNode regexp;
+    private RegexNode regexp;
 
     public re(RegexNode re) {
         this.regexp = re;
