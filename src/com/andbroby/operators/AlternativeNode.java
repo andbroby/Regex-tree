@@ -20,9 +20,13 @@ public class AlternativeNode extends BinaryNode {
     }
 
     public boolean shift(char c, boolean mark) {
+        if (this.marked) {
+            return true;
+        }
         boolean markedLeft = this.leftChild.shift(c, mark);
         boolean markedRight = this.rightChild.shift(c, mark);
         boolean matched = markedLeft || markedRight;
+        super.marked = matched;
 
         return matched;
     }

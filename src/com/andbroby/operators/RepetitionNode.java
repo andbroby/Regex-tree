@@ -18,7 +18,8 @@ public class RepetitionNode extends RegexNode {
     }
 
     public boolean shift(char c, boolean mark) {
-        return this.re.shift(c, mark || this.marked);
+        this.marked = this.re.shift(c, mark || this.marked);
+        return this.marked;
     }
 
     public void reset() {
